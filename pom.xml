@@ -30,10 +30,53 @@
     </repositories>
     <profiles>
         <profile>
-            <id>native</id>
+            <!-- Builds native image for systems using glibc implementation of standard C library (e.g., Ubuntu Linux) -->
+            <id>glibc</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.graalvm.buildtools</groupId>
+                        <artifactId>native-maven-plugin</artifactId>
+                        <configuration>
+                            <mainClass>org.mnowrot.MyApplicationKt</mainClass>
+                            <buildArgs>
+                                <buildArg>--gc=G1</buildArg>
+                                <buildArg>--future-defaults=all</buildArg>
+                                <buildArg>-march=native</buildArg>
+                            </buildArgs>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <!-- Builds native image for systems using musl implementation of standard C library (e.g., Alpine Linux) -->
+            <id>musl</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.graalvm.buildtools</groupId>
+                        <artifactId>native-maven-plugin</artifactId>
+                        <configuration>
+                            <mainClass>org.mnowrot.MyApplicationKt</mainClass>
+                            <buildArgs>
+<!--                                <buildArg>&#45;&#45;gc=G1</buildArg>--> <!-- "Segmentation fault (core dumped)" when this is added -->
+                                <buildArg>--future-defaults=all</buildArg>
+                                <buildArg>-march=native</buildArg>
+                                <buildArg>--static</buildArg>
+                                <buildArg>--libc=musl</buildArg>
+                                <buildArg>--no-fallback</buildArg>
+                            </buildArgs>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
     </profiles>
 
@@ -54,7 +97,7 @@
                             <outputDirectory>${project.build.directory}</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>src/main/docker</directory>
+                                    <directory>docker/ubuntu-build</directory>
                                     <includes>
                                         <include>Dockerfile</include>
                                     </includes>
@@ -88,14 +131,6 @@
             <plugin>
                 <groupId>org.graalvm.buildtools</groupId>
                 <artifactId>native-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>org.mnowrot.MyApplicationKt</mainClass>
-                    <buildArgs>
-                        <buildArg>--gc=G1</buildArg>
-                        <buildArg>--future-defaults=all</buildArg>
-                        <buildArg>-march=native</buildArg>
-                    </buildArgs>
-                </configuration>
                 <executions>
                     <execution>
                         <id>add-reachability-metadata</id>
