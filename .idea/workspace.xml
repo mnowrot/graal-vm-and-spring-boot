@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Ubuntu build">
-      <change afterPath="$PROJECT_DIR$/docker/alpine-build/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/ubuntu-build/Dockerfile" afterDir="false" />
+    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Alpine build">
+      <change afterPath="$PROJECT_DIR$/lib/maven/apache-maven-3.9.11-bin.tar.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/docker/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/alpine-build/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/alpine-build/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +88,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu-24.04/home/mnowrot/IdeaProjects/graal-vm-and-spring-boot/target",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu-24.04/home/mnowrot/IdeaProjects/graal-vm-and-spring-boot/lib/maven",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -134,6 +132,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-24.04\home\mnowrot\IdeaProjects\graal-vm-and-spring-boot\lib\maven" />
       <recent name="\\wsl.localhost\Ubuntu-24.04\home\mnowrot\IdeaProjects\graal-vm-and-spring-boot\target" />
       <recent name="\\wsl.localhost\Ubuntu-24.04\home\mnowrot\IdeaProjects\graal-vm-and-spring-boot" />
       <recent name="\\wsl.localhost\Ubuntu-24.04\home\mnowrot\IdeaProjects\graal-vm-and-spring-boot\src\main\docker" />
@@ -242,7 +241,7 @@
       <workItem from="1759251276332" duration="12944000" />
       <workItem from="1759305444771" duration="3926000" />
       <workItem from="1759309420238" duration="905000" />
-      <workItem from="1759323573659" duration="19330000" />
+      <workItem from="1759323573659" duration="21568000" />
     </task>
     <task id="LOCAL-00001" summary="Minimal working HelloWorld Example">
       <option name="closed" value="true" />
@@ -268,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759330847940</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Alpine build">
+      <option name="closed" value="true" />
+      <created>1759351158757</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1759351158757</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +296,8 @@
     <MESSAGE value="Minimal working HelloWorld Example" />
     <MESSAGE value="After code review" />
     <MESSAGE value="Ubuntu build" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ubuntu build" />
+    <MESSAGE value="Alpine build" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alpine build" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

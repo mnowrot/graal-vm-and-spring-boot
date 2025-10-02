@@ -1,8 +1,7 @@
 FROM container-registry.oracle.com/graalvm/native-image:25-muslib AS nativebuild
 
-RUN curl https://dlcdn.apache.org/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.tar.gz -o apache-maven-3.9.11-bin.tar.gz
-RUN tar xzvf apache-maven-3.9.11-bin.tar.gz
-RUN mv apache-maven-3.9.11 /opt/
+COPY lib/maven/apache-maven-3.9.11-bin.tar.gz /opt/
+RUN tar xzvf /opt/apache-maven-3.9.11-bin.tar.gz -C /opt/
 
 ENV M2_HOME="/opt/apache-maven-3.9.11"
 ENV PATH="${M2_HOME}/bin:$PATH"
