@@ -41,7 +41,7 @@
                         <groupId>org.graalvm.buildtools</groupId>
                         <artifactId>native-maven-plugin</artifactId>
                         <configuration>
-                            <mainClass>org.mnowrot.MyApplicationKt</mainClass>
+                            <mainClass>org.mnowrot.graalvmpoc.MyApplicationKt</mainClass>
                             <buildArgs>
                                 <buildArg>--gc=G1</buildArg>
                                 <buildArg>--future-defaults=all</buildArg>
@@ -64,7 +64,7 @@
                         <groupId>org.graalvm.buildtools</groupId>
                         <artifactId>native-maven-plugin</artifactId>
                         <configuration>
-                            <mainClass>org.mnowrot.MyApplicationKt</mainClass>
+                            <mainClass>org.mnowrot.graalvmpoc.MyApplicationKt</mainClass>
                             <buildArgs>
 <!--                                <buildArg>&#45;&#45;gc=G1</buildArg>--> <!-- "Segmentation fault (core dumped)" when this is added -->
                                 <buildArg>--future-defaults=all</buildArg>

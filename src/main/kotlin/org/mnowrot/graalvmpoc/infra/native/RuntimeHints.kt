@@ -1,4 +1,4 @@
-package org.mnowrot.infra.native
+package org.mnowrot.graalvmpoc.infra.native
 
 import org.apache.coyote.AbstractProtocol
 import org.apache.coyote.http11.AbstractHttp11Protocol

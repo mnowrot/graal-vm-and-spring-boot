@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Use pre-downloaded Maven">
-      <change beforePath="$PROJECT_DIR$/docker/alpine-build/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/alpine-build/Dockerfile" afterDir="false" />
+    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Update workspace.xml for task management and Maven configuration adjustments">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/config/AppConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/rest/HelloWorldController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/org/mnowrot/graalvmpoc/HelloWorldControllerTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/MyApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/MyApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/infra/native/RuntimeHints.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/native/RuntimeHints.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/org/mnowrot/MyApplicationTest.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +76,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Docker.alpine-build/Dockerfile.executor": "Run",
+    "JUnit.HelloWorldControllerTest.executor": "Run",
+    "JUnit.MyApplicationTest (1).executor": "Run",
     "JUnit.MyApplicationTest.executor": "Run",
     "JUnit.MyApplicationTest.home endpoint returns Hello World.executor": "Run",
     "Maven.graal-vm-and-spring-boot [-Pmusl,clean...].executor": "Run",
@@ -92,7 +103,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.kotlinCompiler",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -147,33 +161,18 @@
     </option>
   </component>
   <component name="RunManager" selected="Docker.alpine-build/Dockerfile">
-    <configuration name="MyApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HelloWorldControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="graal-vm-and-spring-boot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.mnowrot.*" />
+          <option name="PATTERN" value="org.mnowrot.graalvmpoc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.mnowrot" />
-      <option name="MAIN_CLASS_NAME" value="org.mnowrot.MyApplicationTest" />
+      <option name="PACKAGE_NAME" value="org.mnowrot.graalvmpoc" />
+      <option name="MAIN_CLASS_NAME" value="org.mnowrot.graalvmpoc.HelloWorldControllerTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyApplicationTest.home endpoint returns Hello World" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="graal-vm-and-spring-boot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.mnowrot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.mnowrot" />
-      <option name="MAIN_CLASS_NAME" value="org.mnowrot.MyApplicationTest" />
-      <option name="METHOD_NAME" value="home endpoint returns Hello World" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,7 +180,7 @@
     <configuration name="MyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="graal-vm-and-spring-boot" />
       <target name="@@@LOCAL@@@" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.mnowrot.MyApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.mnowrot.graalvmpoc.MyApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -207,14 +206,12 @@
     </configuration>
     <list>
       <item itemvalue="Docker.alpine-build/Dockerfile" />
-      <item itemvalue="JUnit.MyApplicationTest" />
-      <item itemvalue="JUnit.MyApplicationTest.home endpoint returns Hello World" />
+      <item itemvalue="JUnit.HelloWorldControllerTest" />
       <item itemvalue="Spring Boot.MyApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MyApplicationTest" />
-        <item itemvalue="JUnit.MyApplicationTest.home endpoint returns Hello World" />
+        <item itemvalue="JUnit.HelloWorldControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +236,8 @@
       <workItem from="1759251276332" duration="12944000" />
       <workItem from="1759305444771" duration="3926000" />
       <workItem from="1759309420238" duration="905000" />
-      <workItem from="1759323573659" duration="21885000" />
+      <workItem from="1759323573659" duration="22110000" />
+      <workItem from="1759396352555" duration="4221000" />
     </task>
     <task id="LOCAL-00001" summary="Minimal working HelloWorld Example">
       <option name="closed" value="true" />
@@ -281,7 +279,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759396024547</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Clean up commented lines in Alpine build Dockerfile">
+      <option name="closed" value="true" />
+      <created>1759396108225</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1759396108225</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Update workspace.xml for task management and Maven configuration adjustments">
+      <option name="closed" value="true" />
+      <created>1759396160313</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759396160313</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +318,9 @@
     <MESSAGE value="Ubuntu build" />
     <MESSAGE value="Alpine build" />
     <MESSAGE value="Use pre-downloaded Maven" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use pre-downloaded Maven" />
+    <MESSAGE value="Clean up commented lines in Alpine build Dockerfile" />
+    <MESSAGE value="Update workspace.xml for task management and Maven configuration adjustments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace.xml for task management and Maven configuration adjustments" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
