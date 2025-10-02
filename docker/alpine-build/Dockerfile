@@ -17,11 +17,11 @@ COPY ./src /opt/app-build/src/
 #    sleep 10
 #done
 #EOF
+#RUN chmod +x /opt/script.sh
 
 WORKDIR /opt/app-build
 
 RUN mvn -Pmusl clean package
-#RUN chmod +x /opt/script.sh
 #ENTRYPOINT ["/opt/script.sh"]
 
 
