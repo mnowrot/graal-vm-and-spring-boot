@@ -1,7 +1,6 @@
-package org.mnowrot.graalvmpoc
+package org.mnowrot.graalvmpoc.infra.rest
 
 import org.mnowrot.graalvmpoc.config.AppConfig
-import org.mnowrot.graalvmpoc.infra.rest.HelloWorldController
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
