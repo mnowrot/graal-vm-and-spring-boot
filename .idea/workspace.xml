@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Alpine build">
-      <change afterPath="$PROJECT_DIR$/lib/maven/apache-maven-3.9.11-bin.tar.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Use pre-downloaded Maven">
       <change beforePath="$PROJECT_DIR$/docker/alpine-build/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/alpine-build/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -241,7 +239,7 @@
       <workItem from="1759251276332" duration="12944000" />
       <workItem from="1759305444771" duration="3926000" />
       <workItem from="1759309420238" duration="905000" />
-      <workItem from="1759323573659" duration="21568000" />
+      <workItem from="1759323573659" duration="21885000" />
     </task>
     <task id="LOCAL-00001" summary="Minimal working HelloWorld Example">
       <option name="closed" value="true" />
@@ -275,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759351158757</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Use pre-downloaded Maven">
+      <option name="closed" value="true" />
+      <created>1759396024547</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1759396024547</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +303,8 @@
     <MESSAGE value="After code review" />
     <MESSAGE value="Ubuntu build" />
     <MESSAGE value="Alpine build" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alpine build" />
+    <MESSAGE value="Use pre-downloaded Maven" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use pre-downloaded Maven" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
