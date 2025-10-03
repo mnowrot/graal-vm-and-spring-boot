@@ -85,6 +85,27 @@
         <testSourceDirectory>src/test/kotlin</testSourceDirectory>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <configuration>
+                    <rules>
+                        <dependencyConvergence/>
+                        <requireUpperBoundDeps/>
+                        <bannedDependencies/>
+                        <bannedPlugins/>
+                    </rules>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>enforce-versions-and-deps</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
                 <executions>
                     <execution>
