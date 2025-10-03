@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Add Spring Boot Actuator and Prometheus support, update `application.yaml` and `workspace.xml` for monitoring configurations">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
+    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Add Kotlin Logging, configure Logback, and update `HelloWorldController` for logging support">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/rest/HelloWorldController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/rest/HelloWorldController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +155,7 @@
       <command value="mvn -Pmusl clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="Docker.alpine-build/Dockerfile">
+  <component name="RunManager" selected="Spring Boot.MyApplication">
     <configuration name="HelloWorldControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="graal-vm-and-spring-boot" />
       <extension name="coverage">
@@ -236,7 +234,7 @@
       <workItem from="1759323573659" duration="22110000" />
       <workItem from="1759396352555" duration="7051000" />
       <workItem from="1759499059433" duration="938000" />
-      <workItem from="1759504124854" duration="5917000" />
+      <workItem from="1759504124854" duration="8257000" />
     </task>
     <task id="LOCAL-00001" summary="Minimal working HelloWorld Example">
       <option name="closed" value="true" />
@@ -334,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759507661402</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add Kotlin Logging, configure Logback, and update `HelloWorldController` for logging support">
+      <option name="closed" value="true" />
+      <created>1759510099090</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1759510099090</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,7 +370,8 @@
     <MESSAGE value="Make `MyApplication` and `AppConfig` classes non-open and update `workspace.xml` for consistency with recent changes" />
     <MESSAGE value="Add Maven Enforcer plugin and update `workspace.xml` for task consistency" />
     <MESSAGE value="Add Spring Boot Actuator and Prometheus support, update `application.yaml` and `workspace.xml` for monitoring configurations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Spring Boot Actuator and Prometheus support, update `application.yaml` and `workspace.xml` for monitoring configurations" />
+    <MESSAGE value="Add Kotlin Logging, configure Logback, and update `HelloWorldController` for logging support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Kotlin Logging, configure Logback, and update `HelloWorldController` for logging support" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
