@@ -12,5 +12,6 @@ class RuntimeHints : RuntimeHintsRegistrar {
         // Register types for reflection
         hints.reflection().registerType(AbstractProtocol::class.java, MemberCategory.INVOKE_PUBLIC_METHODS)
         hints.reflection().registerType(AbstractHttp11Protocol::class.java, MemberCategory.INVOKE_PUBLIC_METHODS)
+        hints.reflection().registerType(com.sun.management.OperatingSystemMXBean::class.java, MemberCategory.INVOKE_PUBLIC_METHODS)
     }
 }
