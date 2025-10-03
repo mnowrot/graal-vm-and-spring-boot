@@ -8,6 +8,6 @@ import org.springframework.context.annotation.ImportRuntimeHints
 @Configuration
 @ImportRuntimeHints(RuntimeHints::class)
 @ConfigurationProperties(prefix = "config")
-open class AppConfig {
+class AppConfig {
     lateinit var message: String
 }
