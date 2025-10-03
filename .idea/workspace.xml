@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Add Maven Enforcer plugin and update `workspace.xml` for task consistency">
+    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Add Spring Boot Actuator and Prometheus support, update `application.yaml` and `workspace.xml` for monitoring configurations">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/native/RuntimeHints.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/native/RuntimeHints.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/rest/HelloWorldController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/rest/HelloWorldController.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +236,7 @@
       <workItem from="1759323573659" duration="22110000" />
       <workItem from="1759396352555" duration="7051000" />
       <workItem from="1759499059433" duration="938000" />
-      <workItem from="1759504124854" duration="3487000" />
+      <workItem from="1759504124854" duration="5917000" />
     </task>
     <task id="LOCAL-00001" summary="Minimal working HelloWorld Example">
       <option name="closed" value="true" />
@@ -326,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759505620050</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add Spring Boot Actuator and Prometheus support, update `application.yaml` and `workspace.xml` for monitoring configurations">
+      <option name="closed" value="true" />
+      <created>1759507661402</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1759507661402</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +363,8 @@
     <MESSAGE value="Refactor `HelloWorldControllerTest` package structure and update `workspace.xml` for project changes" />
     <MESSAGE value="Make `MyApplication` and `AppConfig` classes non-open and update `workspace.xml` for consistency with recent changes" />
     <MESSAGE value="Add Maven Enforcer plugin and update `workspace.xml` for task consistency" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Maven Enforcer plugin and update `workspace.xml` for task consistency" />
+    <MESSAGE value="Add Spring Boot Actuator and Prometheus support, update `application.yaml` and `workspace.xml` for monitoring configurations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Spring Boot Actuator and Prometheus support, update `application.yaml` and `workspace.xml` for monitoring configurations" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds">
+
+    <contextName>graal-vm-and-spring-boot</contextName>
+
+    <!-- Colorized, human‑friendly console pattern -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    <property name="COLORED_PATTERN" value="%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %highlight(%-5level) %clr([%thread]){faint} %clr(%logger{36}){cyan} - %msg%n"/>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${COLORED_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Kotlin logging (via slf4j) will use these levels -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
