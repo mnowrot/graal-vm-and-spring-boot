@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Update `workspace.xml` for task updates and disable Logback scanning in `logback-spring.xml`">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
+    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Add `TaskService`, `TaskController`, and `GlobalExceptionHandler` for task management with tests and in-memory storage">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/domain/Task.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/rest/GlobalExceptionHandler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/rest/TaskController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/service/TaskService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/org/mnowrot/graalvmpoc/infra/rest/GlobalExceptionHandlerTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/org/mnowrot/graalvmpoc/infra/rest/TaskControllerTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/org/mnowrot/graalvmpoc/service/TaskServiceTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/native/RuntimeHints.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/native/RuntimeHints.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,44 +73,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.alpine-build/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.HelloWorldControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MyApplicationTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MyApplicationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MyApplicationTest.home endpoint returns Hello World.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.graal-vm-and-spring-boot [-Pmusl,clean...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.graal-vm-and-spring-boot [-Pnative,clean...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.graal-vm-and-spring-boot [clean,verify].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.MyApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu-24.04/home/mnowrot/IdeaProjects/graal-vm-and-spring-boot/lib/maven&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.kotlinCompiler&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.alpine-build/Dockerfile.executor": "Run",
+    "JUnit.GlobalExceptionHandlerTest.executor": "Run",
+    "JUnit.HelloWorldControllerTest.executor": "Run",
+    "JUnit.MyApplicationTest (1).executor": "Run",
+    "JUnit.MyApplicationTest.executor": "Run",
+    "JUnit.MyApplicationTest.home endpoint returns Hello World.executor": "Run",
+    "JUnit.TaskControllerTest.executor": "Run",
+    "JUnit.TaskServiceTest.executor": "Run",
+    "Maven.graal-vm-and-spring-boot [-Pmusl,clean...].executor": "Run",
+    "Maven.graal-vm-and-spring-boot [-Pnative,clean...].executor": "Run",
+    "Maven.graal-vm-and-spring-boot [clean,verify].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.MyApplication.executor": "Run",
+    "git-widget-placeholder": "develop",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu-24.04/home/mnowrot/IdeaProjects/graal-vm-and-spring-boot/lib/maven",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.kotlinCompiler",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Bookmarks" side_tool="true" />
@@ -145,6 +157,7 @@
       <recent name="\\wsl.localhost\Ubuntu-24.04\home\mnowrot\IdeaProjects\graal-vm-and-spring-boot\src\main\docker\ubuntu" />
     </key>
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="org.mnowrot.graalvmpoc.service" />
       <recent name="org.mnowrot.graalvmpoc.infra.rest" />
     </key>
   </component>
@@ -155,6 +168,21 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.MyApplication">
+    <configuration name="GlobalExceptionHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="graal-vm-and-spring-boot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.mnowrot.graalvmpoc.infra.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.mnowrot.graalvmpoc.infra.rest" />
+      <option name="MAIN_CLASS_NAME" value="org.mnowrot.graalvmpoc.infra.rest.GlobalExceptionHandlerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HelloWorldControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="graal-vm-and-spring-boot" />
       <extension name="coverage">
@@ -166,6 +194,36 @@
       <option name="PACKAGE_NAME" value="org.mnowrot.graalvmpoc" />
       <option name="MAIN_CLASS_NAME" value="org.mnowrot.graalvmpoc.HelloWorldControllerTest" />
       <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="graal-vm-and-spring-boot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.mnowrot.graalvmpoc.infra.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.mnowrot.graalvmpoc.infra.rest" />
+      <option name="MAIN_CLASS_NAME" value="org.mnowrot.graalvmpoc.infra.rest.TaskControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="graal-vm-and-spring-boot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.mnowrot.graalvmpoc.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.mnowrot.graalvmpoc.service" />
+      <option name="MAIN_CLASS_NAME" value="org.mnowrot.graalvmpoc.service.TaskServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -200,11 +258,17 @@
     </configuration>
     <list>
       <item itemvalue="Docker.alpine-build/Dockerfile" />
+      <item itemvalue="JUnit.GlobalExceptionHandlerTest" />
+      <item itemvalue="JUnit.TaskControllerTest" />
+      <item itemvalue="JUnit.TaskServiceTest" />
       <item itemvalue="JUnit.HelloWorldControllerTest" />
       <item itemvalue="Spring Boot.MyApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TaskServiceTest" />
+        <item itemvalue="JUnit.TaskControllerTest" />
+        <item itemvalue="JUnit.GlobalExceptionHandlerTest" />
         <item itemvalue="JUnit.HelloWorldControllerTest" />
       </list>
     </recent_temporary>
@@ -233,7 +297,7 @@
       <workItem from="1759323573659" duration="22110000" />
       <workItem from="1759396352555" duration="7051000" />
       <workItem from="1759499059433" duration="938000" />
-      <workItem from="1759504124854" duration="8635000" />
+      <workItem from="1759504124854" duration="16498000" />
     </task>
     <task id="LOCAL-00001" summary="Minimal working HelloWorld Example">
       <option name="closed" value="true" />
@@ -347,7 +411,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759512441892</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Update `workspace.xml` and disable Logback scanning in `logback-spring.xml` for task adjustments">
+      <option name="closed" value="true" />
+      <created>1759512829256</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1759512829256</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Clean up commented lines in `logback-spring.xml` configuration">
+      <option name="closed" value="true" />
+      <created>1759512932774</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1759512932774</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +459,10 @@
     <MESSAGE value="Add Spring Boot Actuator and Prometheus support, update `application.yaml` and `workspace.xml` for monitoring configurations" />
     <MESSAGE value="Add Kotlin Logging, configure Logback, and update `HelloWorldController` for logging support" />
     <MESSAGE value="Update `workspace.xml` for task updates and disable Logback scanning in `logback-spring.xml`" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update `workspace.xml` for task updates and disable Logback scanning in `logback-spring.xml`" />
+    <MESSAGE value="Update `workspace.xml` and disable Logback scanning in `logback-spring.xml` for task adjustments" />
+    <MESSAGE value="Clean up commented lines in `logback-spring.xml` configuration" />
+    <MESSAGE value="Add `TaskService`, `TaskController`, and `GlobalExceptionHandler` for task management with tests and in-memory storage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add `TaskService`, `TaskController`, and `GlobalExceptionHandler` for task management with tests and in-memory storage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
