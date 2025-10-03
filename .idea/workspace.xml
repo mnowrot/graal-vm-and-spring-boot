@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Add Kotlin Logging, configure Logback, and update `HelloWorldController` for logging support">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Update `workspace.xml` for task updates and disable Logback scanning in `logback-spring.xml`">
       <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -234,7 +233,7 @@
       <workItem from="1759323573659" duration="22110000" />
       <workItem from="1759396352555" duration="7051000" />
       <workItem from="1759499059433" duration="938000" />
-      <workItem from="1759504124854" duration="8257000" />
+      <workItem from="1759504124854" duration="8635000" />
     </task>
     <task id="LOCAL-00001" summary="Minimal working HelloWorld Example">
       <option name="closed" value="true" />
@@ -340,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759510099090</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update `workspace.xml` for task updates and disable Logback scanning in `logback-spring.xml`">
+      <option name="closed" value="true" />
+      <created>1759512441892</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1759512441892</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +378,8 @@
     <MESSAGE value="Add Maven Enforcer plugin and update `workspace.xml` for task consistency" />
     <MESSAGE value="Add Spring Boot Actuator and Prometheus support, update `application.yaml` and `workspace.xml` for monitoring configurations" />
     <MESSAGE value="Add Kotlin Logging, configure Logback, and update `HelloWorldController` for logging support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Kotlin Logging, configure Logback, and update `HelloWorldController` for logging support" />
+    <MESSAGE value="Update `workspace.xml` for task updates and disable Logback scanning in `logback-spring.xml`" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update `workspace.xml` for task updates and disable Logback scanning in `logback-spring.xml`" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
