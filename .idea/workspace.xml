@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Add `TaskService`, `TaskController`, and `GlobalExceptionHandler` for task management with tests and in-memory storage">
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Add `.ai/mcp/mcp.json` configuration file">
+      <change beforePath="$PROJECT_DIR$/docker/alpine-build/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/alpine-build/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +172,7 @@
       <command value="mvn -Pmusl clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MyApplication">
+  <component name="RunManager" selected="Docker.alpine-build/Dockerfile">
     <configuration name="MyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="graal-vm-and-spring-boot" />
       <target name="@@@LOCAL@@@" />
@@ -263,7 +260,7 @@
       <workItem from="1776001416468" duration="564000" />
       <workItem from="1776002007535" duration="41000" />
       <workItem from="1776002205457" duration="296000" />
-      <workItem from="1776002543042" duration="3313000" />
+      <workItem from="1776002543042" duration="3848000" />
     </task>
     <task id="LOCAL-00001" summary="Minimal working HelloWorld Example">
       <option name="closed" value="true" />
@@ -393,7 +390,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759512932774</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Update Kotlin version to `2.3.20`, adjust Kotlin compiler JVM target to `25`, and modify IDE project files for compatibility">
+      <option name="closed" value="true" />
+      <created>1776006277427</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1776006277427</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add `.ai/mcp/mcp.json` configuration file">
+      <option name="closed" value="true" />
+      <created>1776006358428</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1776006358428</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +441,9 @@
     <MESSAGE value="Update `workspace.xml` and disable Logback scanning in `logback-spring.xml` for task adjustments" />
     <MESSAGE value="Clean up commented lines in `logback-spring.xml` configuration" />
     <MESSAGE value="Add `TaskService`, `TaskController`, and `GlobalExceptionHandler` for task management with tests and in-memory storage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add `TaskService`, `TaskController`, and `GlobalExceptionHandler` for task management with tests and in-memory storage" />
+    <MESSAGE value="Update Kotlin version to `2.3.20`, adjust Kotlin compiler JVM target to `25`, and modify IDE project files for compatibility" />
+    <MESSAGE value="Add `.ai/mcp/mcp.json` configuration file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add `.ai/mcp/mcp.json` configuration file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
