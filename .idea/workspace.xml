@@ -5,21 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Add `TaskService`, `TaskController`, and `GlobalExceptionHandler` for task management with tests and in-memory storage">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/domain/Task.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/rest/GlobalExceptionHandler.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/rest/TaskController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/service/TaskService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/org/mnowrot/graalvmpoc/infra/rest/GlobalExceptionHandlerTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/org/mnowrot/graalvmpoc/infra/rest/TaskControllerTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/org/mnowrot/graalvmpoc/service/TaskServiceTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/native/RuntimeHints.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/native/RuntimeHints.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="31" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,9 +56,12 @@
       <MavenImportingSettings>
         <option name="downloadAnnotationsAutomatically" value="true" />
         <option name="downloadDocsAutomatically" value="true" />
-        <option name="downloadSourcesAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -76,6 +77,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Docker.alpine-build/Dockerfile.executor": "Run",
+    "Docker.target/Dockerfile.executor": "Run",
+    "Docker.ubuntu-build/Dockerfile.executor": "Run",
     "JUnit.GlobalExceptionHandlerTest.executor": "Run",
     "JUnit.HelloWorldControllerTest.executor": "Run",
     "JUnit.MyApplicationTest (1).executor": "Run",
@@ -85,17 +88,22 @@
     "JUnit.TaskServiceTest.executor": "Run",
     "Maven.graal-vm-and-spring-boot [-Pmusl,clean...].executor": "Run",
     "Maven.graal-vm-and-spring-boot [-Pnative,clean...].executor": "Run",
+    "Maven.graal-vm-and-spring-boot [clean,package].executor": "Run",
     "Maven.graal-vm-and-spring-boot [clean,verify].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.MyApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "develop",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
@@ -106,10 +114,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.kotlinCompiler",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.42528737",
+    "settings.editor.selected.configurable": "settings.sync",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -168,67 +176,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.MyApplication">
-    <configuration name="GlobalExceptionHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="graal-vm-and-spring-boot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.mnowrot.graalvmpoc.infra.rest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.mnowrot.graalvmpoc.infra.rest" />
-      <option name="MAIN_CLASS_NAME" value="org.mnowrot.graalvmpoc.infra.rest.GlobalExceptionHandlerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HelloWorldControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="graal-vm-and-spring-boot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.mnowrot.graalvmpoc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.mnowrot.graalvmpoc" />
-      <option name="MAIN_CLASS_NAME" value="org.mnowrot.graalvmpoc.HelloWorldControllerTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TaskControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="graal-vm-and-spring-boot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.mnowrot.graalvmpoc.infra.rest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.mnowrot.graalvmpoc.infra.rest" />
-      <option name="MAIN_CLASS_NAME" value="org.mnowrot.graalvmpoc.infra.rest.TaskControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TaskServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="graal-vm-and-spring-boot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.mnowrot.graalvmpoc.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.mnowrot.graalvmpoc.service" />
-      <option name="MAIN_CLASS_NAME" value="org.mnowrot.graalvmpoc.service.TaskServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="graal-vm-and-spring-boot" />
       <target name="@@@LOCAL@@@" />
@@ -237,7 +184,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="alpine-build/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
+    <configuration name="alpine-build/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="docker-desktop-linux">
       <deployment type="dockerfile">
         <settings>
           <option name="imageTag" value="graal-vm-alpine:latest" />
@@ -256,20 +207,31 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="ubuntu-build/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="docker-desktop-linux">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="containerName" value="graal-vm-ubuntu" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8080" />
+                <option name="hostPort" value="8080" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="sourceFilePath" value="target/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Docker.alpine-build/Dockerfile" />
-      <item itemvalue="JUnit.GlobalExceptionHandlerTest" />
-      <item itemvalue="JUnit.TaskControllerTest" />
-      <item itemvalue="JUnit.TaskServiceTest" />
-      <item itemvalue="JUnit.HelloWorldControllerTest" />
+      <item itemvalue="Docker.ubuntu-build/Dockerfile" />
       <item itemvalue="Spring Boot.MyApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TaskServiceTest" />
-        <item itemvalue="JUnit.TaskControllerTest" />
-        <item itemvalue="JUnit.GlobalExceptionHandlerTest" />
-        <item itemvalue="JUnit.HelloWorldControllerTest" />
+        <item itemvalue="Docker.ubuntu-build/Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -298,6 +260,10 @@
       <workItem from="1759396352555" duration="7051000" />
       <workItem from="1759499059433" duration="938000" />
       <workItem from="1759504124854" duration="16498000" />
+      <workItem from="1776001416468" duration="564000" />
+      <workItem from="1776002007535" duration="41000" />
+      <workItem from="1776002205457" duration="296000" />
+      <workItem from="1776002543042" duration="3313000" />
     </task>
     <task id="LOCAL-00001" summary="Minimal working HelloWorld Example">
       <option name="closed" value="true" />
