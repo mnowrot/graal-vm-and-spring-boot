@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.6</version>
+        <version>3.5.13</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -253,7 +253,7 @@
         <dependency>
             <groupId>io.github.oshai</groupId>
             <artifactId>kotlin-logging-jvm</artifactId>
-            <version>7.0.3</version>
+            <version>8.0.01</version>
         </dependency>
 
         <dependency>

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Add `.ai/mcp/mcp.json` configuration file">
-      <change beforePath="$PROJECT_DIR$/docker/alpine-build/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/alpine-build/Dockerfile" afterDir="false" />
+    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Update Alpine base image to `3.23.3` and modify `workspace.xml` for project adjustments">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +261,7 @@
       <workItem from="1776001416468" duration="564000" />
       <workItem from="1776002007535" duration="41000" />
       <workItem from="1776002205457" duration="296000" />
-      <workItem from="1776002543042" duration="3848000" />
+      <workItem from="1776002543042" duration="5800000" />
     </task>
     <task id="LOCAL-00001" summary="Minimal working HelloWorld Example">
       <option name="closed" value="true" />
@@ -406,7 +407,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776006358428</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Update Alpine base image to `3.23.3` and modify `workspace.xml` for project adjustments">
+      <option name="closed" value="true" />
+      <created>1776006891483</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1776006891483</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +452,8 @@
     <MESSAGE value="Add `TaskService`, `TaskController`, and `GlobalExceptionHandler` for task management with tests and in-memory storage" />
     <MESSAGE value="Update Kotlin version to `2.3.20`, adjust Kotlin compiler JVM target to `25`, and modify IDE project files for compatibility" />
     <MESSAGE value="Add `.ai/mcp/mcp.json` configuration file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add `.ai/mcp/mcp.json` configuration file" />
+    <MESSAGE value="Update Alpine base image to `3.23.3` and modify `workspace.xml` for project adjustments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Alpine base image to `3.23.3` and modify `workspace.xml` for project adjustments" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
