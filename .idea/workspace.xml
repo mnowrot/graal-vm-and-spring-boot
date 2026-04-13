@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Update Maven build phase, Spring Boot run configuration, and Docker image to `ubuntu-build` in `workspace.xml`">
+    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Update Spring Boot to `4.0.5` and modify `workspace.xml` for Maven and IDE configuration adjustments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/native/RuntimeHints.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/mnowrot/graalvmpoc/infra/native/RuntimeHints.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="31" />
+    <option name="cachedIndexableFilesCount" value="235" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -104,7 +105,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.MyApplication.executor": "Debug",
+    "Spring Boot.MyApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "develop",
@@ -120,7 +121,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.42528737",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.testRunning",
+    "settings.editor.selected.configurable": "ml.llm.AcpAgentsConfigurable",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -178,7 +179,7 @@
       <command value="mvn -Pmusl clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="Docker.ubuntu-build/Dockerfile">
+  <component name="RunManager" selected="Docker.alpine-build/Dockerfile">
     <configuration name="MyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="graal-vm-and-spring-boot" />
       <target name="@@@LOCAL@@@" />
@@ -188,7 +189,9 @@
       </method>
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="alpine-build/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="docker-desktop-linux">
@@ -267,7 +270,8 @@
       <workItem from="1776001416468" duration="564000" />
       <workItem from="1776002007535" duration="41000" />
       <workItem from="1776002205457" duration="296000" />
-      <workItem from="1776002543042" duration="8178000" />
+      <workItem from="1776002543042" duration="13940000" />
+      <workItem from="1776020535911" duration="12156000" />
     </task>
     <task id="LOCAL-00001" summary="Minimal working HelloWorld Example">
       <option name="closed" value="true" />
@@ -437,7 +441,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776010037090</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Update Spring Boot to `4.0.5` and modify `workspace.xml` for Maven and IDE configuration adjustments">
+      <option name="closed" value="true" />
+      <created>1776011119346</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1776011119346</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +489,8 @@
     <MESSAGE value="Update Alpine base image to `3.23.3` and modify `workspace.xml` for project adjustments" />
     <MESSAGE value="Update Spring Boot to `3.5.13`, Kotlin Logging to `8.0.01`, and modify `workspace.xml` for project updates" />
     <MESSAGE value="Update Maven build phase, Spring Boot run configuration, and Docker image to `ubuntu-build` in `workspace.xml`" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Maven build phase, Spring Boot run configuration, and Docker image to `ubuntu-build` in `workspace.xml`" />
+    <MESSAGE value="Update Spring Boot to `4.0.5` and modify `workspace.xml` for Maven and IDE configuration adjustments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Spring Boot to `4.0.5` and modify `workspace.xml` for Maven and IDE configuration adjustments" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

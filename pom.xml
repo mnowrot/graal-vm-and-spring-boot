@@ -44,7 +44,8 @@
                             <mainClass>org.mnowrot.graalvmpoc.MyApplicationKt</mainClass>
                             <buildArgs>
                                 <buildArg>--gc=G1</buildArg>
-                                <buildArg>--future-defaults=all</buildArg>
+<!--                                <buildArg>&#45;&#45;future-defaults=all</buildArg> Especially the complete-reflection-types default produces an instrumentation that does not pass analysis -->
+                                <buildArg>--future-defaults=run-time-initialize-jdk,run-time-initialize-file-system-providers,run-time-initialize-security-providers</buildArg>
                                 <buildArg>-march=native</buildArg>
                             </buildArgs>
                         </configuration>
@@ -67,7 +68,8 @@
                             <mainClass>org.mnowrot.graalvmpoc.MyApplicationKt</mainClass>
                             <buildArgs>
 <!--                                <buildArg>&#45;&#45;gc=G1</buildArg>--> <!-- "Segmentation fault (core dumped)" when this is added -->
-                                <buildArg>--future-defaults=all</buildArg>
+<!--                                <buildArg>&#45;&#45;future-defaults=all</buildArg> Especially the complete-reflection-types default produces an instrumentation that does not pass analysis -->
+                                <buildArg>--future-defaults=run-time-initialize-jdk,run-time-initialize-file-system-providers,run-time-initialize-security-providers</buildArg>
                                 <buildArg>-march=native</buildArg>
                                 <buildArg>--static</buildArg>
                                 <buildArg>--libc=musl</buildArg>
@@ -246,7 +248,7 @@
             <version>${kotlin.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.fasterxml.jackson.module</groupId>
+            <groupId>tools.jackson.module</groupId>
             <artifactId>jackson-module-kotlin</artifactId>
         </dependency>
         <!-- Kotlin logging facade -->
