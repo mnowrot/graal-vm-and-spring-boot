@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>4.0.5</version>
+        <version>4.1.0</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -18,8 +18,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.code.style>official</kotlin.code.style>
         <java.version>25</java.version>
-        <kotlin.version>2.3.20</kotlin.version>
+        <kotlin.version>2.4.0</kotlin.version>
         <kotlin.compiler.jvmTarget>25</kotlin.compiler.jvmTarget>
+        <!-- Align io.prometheus client up to the version required by micrometer-registry-prometheus 1.17.0.
+             The Spring Boot 4.1.0 BOM pins it at 1.5.1, which fails the requireUpperBoundDeps enforcer rule. -->
+        <prometheus-client.version>1.7.0</prometheus-client.version>
     </properties>
 
     <repositories>
@@ -255,7 +258,7 @@
         <dependency>
             <groupId>io.github.oshai</groupId>
             <artifactId>kotlin-logging-jvm</artifactId>
-            <version>8.0.01</version>
+            <version>8.0.4</version>
         </dependency>
 
         <dependency>
