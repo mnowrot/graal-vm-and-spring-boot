@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Update Spring Boot to `4.1.0`, Kotlin to `2.4.0`, and Ubuntu base image to `26.04`; adjust `workspace.xml`, `Dockerfile`, and Maven configurations">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CLAUDE.md" beforeDir="false" afterPath="$PROJECT_DIR$/CLAUDE.md" afterDir="false" />
+    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Refine `workspace.xml` to remove unused properties, update indexed files, and adjust task configurations.">
+      <change afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -546,7 +545,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minimal working HelloWorld Example" />
     <MESSAGE value="After code review" />
     <MESSAGE value="Ubuntu build" />
     <MESSAGE value="Alpine build" />
@@ -571,7 +569,8 @@
     <MESSAGE value="Update Spring Boot to `4.0.5` and modify `workspace.xml` for Maven and IDE configuration adjustments" />
     <MESSAGE value="Add `CLAUDE.md` with project guidance, update Maven arguments, and refine `workspace.xml` configurations." />
     <MESSAGE value="Update Spring Boot to `4.1.0`, Kotlin to `2.4.0`, and Ubuntu base image to `26.04`; adjust `workspace.xml`, `Dockerfile`, and Maven configurations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Spring Boot to `4.1.0`, Kotlin to `2.4.0`, and Ubuntu base image to `26.04`; adjust `workspace.xml`, `Dockerfile`, and Maven configurations" />
+    <MESSAGE value="Refine `workspace.xml` to remove unused properties, update indexed files, and adjust task configurations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refine `workspace.xml` to remove unused properties, update indexed files, and adjust task configurations." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
