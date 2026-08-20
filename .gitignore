@@ -37,3 +37,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Maven (extracted from lib/maven/apache-maven-3.9.11-bin.tar.gz) ###
+lib/maven/apache-maven-3.9.11/
