@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Refine `workspace.xml` to remove unused properties, update indexed files, and adjust task configurations.">
-      <change afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
+    <list default="true" id="099c7181-4fc2-4022-8fe8-46a25bfcc05c" name="Changes" comment="Add `AGENTS.md` with project guidance and update `workspace.xml` to refine task configurations and remove unused properties">
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/alpine-build/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/alpine-build/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,60 +70,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0" />
-      <entry key="S60" value="1.0" />
-      <entry key="M2" value="1.0" />
-      <entry key="M5" value="1.0" />
-      <entry key="M10" value="1.0" />
-      <entry key="M15" value="1.0" />
-      <entry key="M30" value="1.0" />
-      <entry key="H1" value="1.0" />
-      <entry key="H2" value="1.0" />
-      <entry key="H4" value="1.0" />
-      <entry key="D1" value="1.0" />
-      <entry key="W1" value="1.0" />
+      <entry key="MS500" value="1.0000010249606828" />
+      <entry key="S2" value="1.0318182876723059" />
+      <entry key="S5" value="1.2519351041872704" />
+      <entry key="S10" value="1.513048661565549" />
+      <entry key="S30" value="2.018679957023899" />
+      <entry key="S60" value="2.3647471365143744" />
+      <entry key="M2" value="2.6321353824847042" />
+      <entry key="M5" value="2.8383336684877465" />
+      <entry key="M10" value="2.921180907602003" />
+      <entry key="M15" value="2.9945375527911944" />
+      <entry key="M30" value="3.5236312472865086" />
+      <entry key="H1" value="4.805653320160653" />
+      <entry key="H2" value="6.297301875252731" />
+      <entry key="H4" value="7.449133369981643" />
+      <entry key="D1" value="8.708446808306729" />
+      <entry key="W1" value="8.957458798955702" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
       <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="0.0" />
-      <entry key="M5" value="0.0" />
-      <entry key="M10" value="0.0" />
-      <entry key="M15" value="0.0" />
-      <entry key="M30" value="0.0" />
-      <entry key="H1" value="0.0" />
-      <entry key="H2" value="0.0" />
-      <entry key="H4" value="0.0" />
-      <entry key="D1" value="0.0" />
-      <entry key="W1" value="0.0" />
+      <entry key="S10" value="7.175014955000157E-188" />
+      <entry key="S30" value="4.155349940575173E-63" />
+      <entry key="S60" value="6.4462003851689E-32" />
+      <entry key="M2" value="2.538936861201732E-16" />
+      <entry key="M5" value="5.7791073308508E-7" />
+      <entry key="M10" value="7.602044021742311E-4" />
+      <entry key="M15" value="0.008329525334526402" />
+      <entry key="M30" value="0.0912662332657944" />
+      <entry key="H1" value="0.3021030176376833" />
+      <entry key="H2" value="0.5496389884621388" />
+      <entry key="H4" value="0.7413764148272718" />
+      <entry key="D1" value="0.9513488429263495" />
+      <entry key="W1" value="0.9929003982746436" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="6.3627060598213E-5" />
-      <entry key="MS500" value="0.1447866007743304" />
-      <entry key="S2" value="0.6168535849047483" />
-      <entry key="S5" value="0.8242763459981316" />
-      <entry key="S10" value="0.9078966604179859" />
-      <entry key="S30" value="0.9683049222441678" />
-      <entry key="S60" value="0.9840248585499086" />
-      <entry key="M2" value="0.9919802712503453" />
-      <entry key="M5" value="0.9967843573901263" />
-      <entry key="M10" value="0.9983908840680219" />
-      <entry key="M15" value="0.9989269681445079" />
-      <entry key="M30" value="0.9994633400703139" />
-      <entry key="H1" value="0.9997316340250086" />
-      <entry key="H2" value="0.9998658080087591" />
-      <entry key="H4" value="0.9999329017532922" />
-      <entry key="D1" value="0.9999888166462182" />
-      <entry key="W1" value="0.999998402370374" />
+      <entry key="MS100" value="4.107334921894005E-25" />
+      <entry key="MS500" value="1.384011924294064E-5" />
+      <entry key="S2" value="0.08788681114373349" />
+      <entry key="S5" value="0.5630810092947229" />
+      <entry key="S10" value="1.0690701613840285" />
+      <entry key="S30" value="1.8402004096734448" />
+      <entry key="S60" value="2.2709529311921584" />
+      <entry key="M2" value="2.584025471478623" />
+      <entry key="M5" value="2.81878823815766" />
+      <entry key="M10" value="2.9121134114220313" />
+      <entry key="M15" value="2.996281455108619" />
+      <entry key="M30" value="3.6114765264718134" />
+      <entry key="H1" value="5.105888859486895" />
+      <entry key="H2" value="6.8459154449199895" />
+      <entry key="H4" value="8.189961617936248" />
+      <entry key="D1" value="9.659697822392719" />
+      <entry key="W1" value="9.950345038886457" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -175,7 +178,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.42528737",
     "settings.editor.selected.configurable": "com.anthropic.code.plugin.settings",
@@ -238,8 +241,9 @@
   </component>
   <component name="RunManager" selected="Docker.alpine-build/Dockerfile">
     <configuration name="MyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ENABLE_JMX_AUTH" value="true" />
       <module name="graal-vm-and-spring-boot" />
-      <target name="@@@LOCAL@@@" />
+      <target name="WSL" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.mnowrot.graalvmpoc.MyApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -545,7 +549,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="After code review" />
     <MESSAGE value="Ubuntu build" />
     <MESSAGE value="Alpine build" />
     <MESSAGE value="Use pre-downloaded Maven" />
@@ -570,7 +573,8 @@
     <MESSAGE value="Add `CLAUDE.md` with project guidance, update Maven arguments, and refine `workspace.xml` configurations." />
     <MESSAGE value="Update Spring Boot to `4.1.0`, Kotlin to `2.4.0`, and Ubuntu base image to `26.04`; adjust `workspace.xml`, `Dockerfile`, and Maven configurations" />
     <MESSAGE value="Refine `workspace.xml` to remove unused properties, update indexed files, and adjust task configurations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refine `workspace.xml` to remove unused properties, update indexed files, and adjust task configurations." />
+    <MESSAGE value="Add `AGENTS.md` with project guidance and update `workspace.xml` to refine task configurations and remove unused properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add `AGENTS.md` with project guidance and update `workspace.xml` to refine task configurations and remove unused properties" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

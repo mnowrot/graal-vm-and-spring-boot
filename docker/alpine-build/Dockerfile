@@ -25,7 +25,7 @@ RUN mvn -Pmusl clean package
 #ENTRYPOINT ["/opt/script.sh"]
 
 
-FROM alpine:3.23.3
+FROM alpine:3.24.1
 
 RUN mkdir -p /opt/app \
     && addgroup -S non-root  \
