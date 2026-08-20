@@ -11,16 +11,6 @@ A Spring Boot 4 + Kotlin proof-of-concept for GraalVM Native Image compilation. 
 The project bundles Maven at `lib/maven/apache-maven-3.9.11/`. Use the wrapper at `./lib/maven/apache-maven-3.9.11/bin/mvn` or a system `mvn`.
 
 ```bash
-# JVM build and run
-mvn compile
-mvn spring-boot:run
-
-# Run all tests
-mvn test
-
-# Run a single test class
-mvn test -Dtest=TaskControllerTest
-
 # Native image build (glibc, default — requires GraalVM JDK with native-image)
 mvn package
 
@@ -37,34 +27,12 @@ docker build -t graal-vm-and-spring-boot:ubuntu target/
 
 ## Architecture
 
-### Package layout
-
-```
-org.mnowrot.graalvmpoc
-├── MyApplication.kt          — Spring Boot entry point
-├── config/
-│   └── AppConfig.kt          — @ConfigurationProperties(prefix="config") + @ImportRuntimeHints
-├── domain/
-│   └── Task.kt               — Task, TaskCreateRequest, TaskUpdateRequest data classes
-├── infra/
-│   ├── native/
-│   │   └── RuntimeHints.kt   — RuntimeHintsRegistrar for GraalVM reflection metadata
-│   └── rest/
-│       ├── HelloWorldController.kt   — GET /  (returns config.message)
-│       ├── TaskController.kt         — CRUD REST API at /api/tasks
-│       └── GlobalExceptionHandler.kt
-└── service/
-    └── TaskService.kt        — In-memory ConcurrentHashMap store, no database
-```
-
 ### Key design points
 
 - **In-memory storage only** — `TaskService` uses a `ConcurrentHashMap` and `AtomicLong` ID sequence. State is lost on restart. There is no database dependency.
 - **GraalVM AOT** — Spring Boot AOT (`process-aot`) runs at `prepare-package`. `RuntimeHints` registers Tomcat and Kotlin internal classes that need reflection at runtime. All new reflection-dependent code must be registered there or via `@RegisterReflectionForBinding`.
 - **Two native profiles**: `glibc` (default, `--gc=G1`) for Ubuntu/standard Linux and `musl` (static, no G1 GC) for Alpine. The musl profile cannot use G1 GC (causes segfault).
 - **Docker**: `docker/ubuntu-build/Dockerfile` is a run-only image that copies the pre-built binary from `target/`. `docker/alpine-build/Dockerfile` is a full multi-stage build using `container-registry.oracle.com/graalvm/native-image:25-muslib`.
-- **Logging** — uses `kotlin-logging-jvm` (facade over SLF4J/Logback). Logback config is in `src/main/resources/logback-spring.xml`.
-- **Actuator endpoints** exposed: `health`, `info`, `metrics`, `prometheus` (at `/actuator/*`). Health probes (`/actuator/health/liveness`, `/actuator/health/readiness`) are enabled.
 
 ### Tests
 
